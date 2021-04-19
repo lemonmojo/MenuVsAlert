@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,11 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MenuVsAlert" customModuleProvider="target">
             <connections>
+                <outlet property="contextMenu" destination="bn4-7B-bO5" id="xUx-Ji-pVo"/>
+                <outlet property="textField" destination="H5s-aA-dv6" id="XoC-6S-AZj"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -696,20 +699,49 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H5s-aA-dv6">
-                        <rect key="frame" x="104" y="74" width="352" height="16"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Please don't move this window and open the &quot;File&quot; menu." id="Wqz-hF-gfH">
+                        <rect key="frame" x="29" y="74" width="502" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Please don't move this window and open the &quot;File&quot; menu or control+click this text." id="Wqz-hF-gfH">
                             <font key="font" usesAppearanceFont="YES"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-D6-gEV">
+                        <rect key="frame" x="192" y="49" width="174" height="18"/>
+                        <buttonCell key="cell" type="check" title="Activate Fix/Workaround" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KHS-ML-Kvy">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkBoxActivateFix_action:" target="Voe-Tx-rLC" id="YGT-KS-PMP"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="H5s-aA-dv6" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="KhR-ws-DZc"/>
+                    <constraint firstItem="BMS-D6-gEV" firstAttribute="top" secondItem="H5s-aA-dv6" secondAttribute="bottom" constant="8" symbolic="YES" id="c1B-X7-Ilw"/>
+                    <constraint firstItem="BMS-D6-gEV" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="jRp-4M-Ecz"/>
                     <constraint firstItem="H5s-aA-dv6" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="tqf-kb-NEa"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="-254.5" y="-221"/>
         </window>
+        <menu id="bn4-7B-bO5">
+            <items>
+                <menuItem title="Item 1" id="phi-vu-FYY">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 2" id="4ki-ui-Vgh">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 3" id="gLf-tg-jJw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="Rn6-fD-2LP"/>
+            </connections>
+            <point key="canvasLocation" x="-402" y="-22"/>
+        </menu>
     </objects>
 </document>

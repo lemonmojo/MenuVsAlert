@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E72023172629B7E100CAB385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72023162629B7E100CAB385 /* AppDelegate.swift */; };
 		E720231C2629B7E200CAB385 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E720231A2629B7E200CAB385 /* MainMenu.xib */; };
+		E7CB4919262D637800729BCA /* NSMenu+ActiveMenuTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4918262D637800729BCA /* NSMenu+ActiveMenuTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		E72023162629B7E100CAB385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E720231B2629B7E200CAB385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E720231D2629B7E200CAB385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7CB4918262D637800729BCA /* NSMenu+ActiveMenuTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+ActiveMenuTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				E72023162629B7E100CAB385 /* AppDelegate.swift */,
+				E7CB4918262D637800729BCA /* NSMenu+ActiveMenuTracking.swift */,
 				E720231A2629B7E200CAB385 /* MainMenu.xib */,
 				E720231D2629B7E200CAB385 /* Info.plist */,
 			);
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72023172629B7E100CAB385 /* AppDelegate.swift in Sources */,
+				E7CB4919262D637800729BCA /* NSMenu+ActiveMenuTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +196,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -247,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
