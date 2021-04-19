@@ -7,6 +7,11 @@ public extension NSMenu {
 		weak static var activeMenu: NSMenu?
 	}
 	
+	/**
+	Tracking of the active menu requires setting up an observer.
+	So before you can access the active menu, call `isTrackingActiveMenu = true`.
+	When you're done monitoring the active menu, call `isTrackingActiveMenu = false` to remove the observer.
+	*/
 	static var activeMenu: NSMenu? {
 		_ActiveMenuStorage.activeMenu
 	}
